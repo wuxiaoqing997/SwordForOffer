@@ -1,0 +1,23 @@
+function GetNumberOfK(data, k)
+{
+  if (data.length < 0 ) {
+    return false
+  }
+  var obj = {}
+  for (var i = 0; i < data.length; i++) {
+    var val = data[i]
+    if (!obj[val]) {
+      obj[val] = 1
+    }
+    else
+      obj[val]++
+  }
+  for (var i = 0; i < data.length; i++) {
+     var val = data[i]
+     if (val == k) {
+      return obj[val]
+      break;
+     }
+  }
+  return 0
+}
