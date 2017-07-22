@@ -1,0 +1,10 @@
+function FindGreatestSumOfSubArray(array) {
+    if (array.length < 0) return 0;
+    var sum = array[0],
+        tempsum = array[0];
+    for (var i = 1; i < array.length; i++) {
+        tempsum = (tempsum < 0) ? array[i] : tempsum + array[i];
+        sum = (tempsum > sum) ? tempsum : sum;
+    }
+    return sum;
+}
