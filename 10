@@ -1,0 +1,19 @@
+function rectCover(number)
+{
+    if (number < 0) {
+      return false
+    }
+    else if (number < 2) {
+      return number
+    }
+    else{
+      var result = []
+      result[0] = 1
+      result[1] = 2
+      for (var i = 2; i < number; i++) {
+         result[i] = result[i - 1] + result[i - 2]
+       }
+       return result[number - 1]
+    }
+}
+添加笔记
