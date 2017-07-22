@@ -1,0 +1,17 @@
+function GetLeastNumbers_Solution(input, k)
+{
+  if (k > input.length) {
+    return false
+  }
+  var array = input.sort(sortNumber)
+  var result = []
+  for (var i = 0; i < k; i++) {
+    result.push(array[i])
+  }
+  return result
+}
+ 
+function sortNumber(a,b)
+{
+return a - b
+}
