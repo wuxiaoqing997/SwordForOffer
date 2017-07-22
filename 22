@@ -1,0 +1,25 @@
+/* function TreeNode(x) {
+    this.val = x;
+    this.left = null;
+    this.right = null;
+} */
+function PrintFromTopToBottom(root)
+{
+    var node = []
+    var result = []
+    node.push(root)
+    if (root == null) {
+      return result
+    }
+    while(node.length){
+      var temp = node.shift()
+      result.push(temp.val)
+      if (temp.left) {
+        node.push(temp.left)
+      }
+      if (temp.right) {
+        node.push(temp.right)
+      }
+    }
+    return result
+}
