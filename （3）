@@ -1,13 +1,13 @@
-function Find(target, array)
+/*function ListNode(x){
+    this.val = x;
+    this.next = null;
+}*/
+function printListFromTailToHead(head)
 {
-  var flag = false
-  for (var i = 0; i < array.length; i++) {
-    for (var j = 0; j < array[i].length; j++) {
-      if (array[i][j] == target) {
-        flag = true
-        break;
-      }
+    var result = []
+    while (head != null) {
+      result.push(head.val)
+      head = head.next
     }
-  }
-  return flag
+    return result.reverse()
 }
