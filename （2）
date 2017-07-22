@@ -1,0 +1,4 @@
+function replaceSpace(str)
+{
+    return encodeURI(str)
+}
