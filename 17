@@ -1,0 +1,25 @@
+function HasSubTree(proot1, proot2) {
+  if (proot1 == null) {
+    return false
+  }
+  if (proot2 == null) {
+    return true
+  }
+  if (proot1.val == proot2.val) {
+    return (HasSubTree(proot1.left, proot2.left) &&
+      HasSubTree(proot1.right, proot2.right))
+  } else {
+    return false
+  }
+}
+ 
+function DoesTree1HaveTree2(proot1, proot2) {
+  if (proot1 == null || proot2 == null) {
+    return false
+  } else {
+    return (HasSubTree(proot1, proot2) ||
+      DoesTree1HaveTree2(proot1.left, proot2) ||
+      DoesTree1HaveTree2(proot1.right, proot2))
+  }
+ 
+}
