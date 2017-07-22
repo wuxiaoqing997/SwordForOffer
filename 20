@@ -1,0 +1,22 @@
+var stack = []
+function push(node)
+{
+  return stack.push(node)
+}
+function pop()
+{
+  return stack.pop()
+}
+function top()
+{
+  if (stack.length == 0 ) {
+    return false
+  }
+  else{
+    return stack[0]
+  }
+}
+function min()
+{
+  return Math.min.apply(this, stack)
+}
