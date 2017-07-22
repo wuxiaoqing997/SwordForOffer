@@ -1,0 +1,24 @@
+function GetUglyNumber_Solution(index)
+{
+  if (index < 0 ) {
+    return false
+  }
+  if (index == 0) {
+    return 0
+  }
+  var ugly = [1]
+  var f2 = 0 , f3 = 0 , f5 = 0
+  for (var i = 1; i < index; i++) {
+    ugly[i] = Math.min(ugly[f2] * 2,ugly[f3] * 3,ugly[f5] * 5)
+    if (ugly[i] == ugly[f2] * 2) {
+      f2++
+    }
+    if (ugly[i] == ugly[f3] * 3) {
+      f3++
+    }
+    if (ugly[i] == ugly[f5] * 5) {
+      f5++
+    }
+  }
+  return ugly[index - 1]
+}
