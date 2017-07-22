@@ -1,0 +1,14 @@
+function reOrderArray(array)
+{
+  var arr1 = [],arr2 = []
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] % 2 == 0) {
+      arr1.push(array[i])
+    }
+    else {
+      arr2.push(array[i])
+    }
+  }
+  var result = [...arr2,...arr1]
+  return result
+}
