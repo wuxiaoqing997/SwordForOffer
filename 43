@@ -1,0 +1,8 @@
+function LeftRotateString(str, n)
+{
+  if (n > str.length) {
+    return false
+  }
+  var result = str.slice(n) + str.slice(0, n)
+  return result
+}
