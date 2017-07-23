@@ -1,0 +1,22 @@
+function FindNumsAppearOnce(array) {
+  if (array.length < 0) {
+    return false
+  }
+  var result = []
+  var obj = {}
+  for (var i = 0; i < array.length; i++) {
+    var val = array[i]
+    if (!obj[val]) {
+      obj[val] = 1
+    } else {
+      obj[val]++
+    }
+  }
+  for (var i = 0; i < array.length; i++) {
+    var val = array[i]
+    if (obj[val] == 1) {
+      result.push(val)
+    }
+  }
+  return result
+}
