@@ -1,0 +1,12 @@
+function duplicate(numbers, duplication)
+{
+  for (var i = 0; i < numbers.length; i++) {
+    if (duplication.indexOf(numbers[i])) {
+      duplication.push(numbers[i])
+    }
+    else {
+      duplication[0] = numbers[i]
+      return true
+    }
+  }
+}
